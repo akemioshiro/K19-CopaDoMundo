@@ -1,0 +1,33 @@
+﻿@model K19_CopaDoMundo.Models.Selecao
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Remoção de Seleção</h2>
+
+<h3>Você tem certeza que deseja remover esta seleção?</h3>
+<fieldset>
+    <legend>Selecao</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(m=>m.Pais)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(m=>m.Pais)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(m => m.Tecnico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(m => m.Tecnico)
+    </div>
+</fieldset>
+
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" />
+    </p>
+}
