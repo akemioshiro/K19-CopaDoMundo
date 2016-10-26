@@ -33,6 +33,16 @@ namespace K19_CopaDoMundo.Models
             context.SaveChanges();
         }
 
+        public Jogador Busca(int id)
+        {
+            return context.Jogadores.Find(id);
+        }
+
+        public void Remove(int id)
+        {
+            Jogador jogador = Busca(id);
+            context.Jogadores.Remove(jogador);
+        }
 
         protected virtual void Dispose(bool disposing)
         {
